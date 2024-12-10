@@ -25,8 +25,8 @@ public class LoginTest {
         driver.findElement(By.name("user-name")).sendKeys("standard_user");
         driver.findElement(By.name("password")).sendKeys("secret_sauce");
         driver.findElement(By.id("login-button")).click();
-        String loginText = driver.findElement(By.cssSelector("#header_container > div.primary_header > div.header_label > div")).getText();
-        Assert.assertEquals(loginText, "Swag Labs");
+        String loginText = driver.findElement(By.cssSelector("#header_container > div.header_secondary_container > span")).getText();
+        Assert.assertEquals(loginText, "Products");
     }
 
     @Test
