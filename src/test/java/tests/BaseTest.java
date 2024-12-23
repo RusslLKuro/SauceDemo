@@ -27,8 +27,8 @@ public class BaseTest {
         yourCartPage = new YourCartPage(driver);
     }
 
-    @AfterMethod(alwaysRun = true)
-    public void dropdown() {
-        driver.quit();
-    }
+//    @AfterMethod(alwaysRun = true)
+//    public void dropdown() {
+//        driver.quit();
+//    }
 }
