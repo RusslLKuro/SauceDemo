@@ -7,9 +7,9 @@ public class LoginPage {
 
     WebDriver driver;
 
-    By  userField = By.name("user-name");
-    By  passwordField = By.name("password");
-    By  loginButton = By.id("login-button");
+    By  userField = By.xpath("//input[@id='user-name']");
+    By  passwordField = By.xpath("//input[@id='password']");
+    By  loginButton = By.xpath("//input[@id='login-button']");
     By  errorMessage = By.cssSelector("[data-test=error]");
 
     public LoginPage(WebDriver driver) {
