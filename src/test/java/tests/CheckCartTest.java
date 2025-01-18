@@ -1,11 +1,20 @@
 package tests;
 
+import io.qameta.allure.*;
 import org.testng.annotations.Test;
 import org.testng.asserts.SoftAssert;
 
 public class CheckCartTest extends BaseTest {
 
-    @Test
+    @Test (testName = "Проверка добавления всех товаров в корзину, а так же их наличия в ней")
+    @Description ("Проверка добавления всех товаров в корзину, а так же их наличия в ней")
+    @Severity(SeverityLevel.CRITICAL)
+    @Epic("SauceDemo - 1.0")
+    @Feature("Shop and cart in SauceDemo")
+    @Story("Добавление всех товаров в корзину, а так же их наличия в ней")
+    @TmsLink("www.jira.com/ITM-3")
+    @Issue("www.jira.com/ITM-4")
+    @Flaky
     public void checkAvailableAllProductsInTheCart() {
         SoftAssert softAssert = new SoftAssert();
         loginPage.open();
