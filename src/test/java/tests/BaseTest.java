@@ -9,7 +9,6 @@ import org.testng.annotations.Listeners;
 import pages.LoginPage;
 import pages.ProductsPage;
 import pages.YourCartPage;
-import utils.AllureUtils;
 
 import java.time.Duration;
 
