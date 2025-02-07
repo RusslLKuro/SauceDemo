@@ -34,8 +34,8 @@ public class BaseTest {
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         } else if (browser.equalsIgnoreCase("edge")) {
             driver = new EdgeDriver();
-            EdgeOptions options =new EdgeOptions();
-            options.addArguments("--headless");
+            EdgeOptions optionsE =new EdgeOptions();
+            optionsE.addArguments("--headless");
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
