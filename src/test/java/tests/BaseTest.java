@@ -26,18 +26,16 @@ public class BaseTest {
     @Parameters({"browser"})
     @BeforeMethod
     public void setup(@Optional("chrome") String browser) {
-        ChromeOptions optionsC = new ChromeOptions();
-        optionsC.addArguments("--headless");
         if (browser.equalsIgnoreCase("chrome")) {
-            driver = new ChromeDriver();
             ChromeOptions options = new ChromeOptions();
             options.addArguments("--headless");
+            driver = new ChromeDriver(options);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         } else if (browser.equalsIgnoreCase("edge")) {
-            driver = new EdgeDriver();
             EdgeOptions optionsE =new EdgeOptions();
             optionsE.addArguments("--headless");
+            driver = new EdgeDriver(optionsE);
             driver.manage().window().maximize();
             driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(15));
         }
