@@ -71,7 +71,7 @@ public class LoginTest extends BaseTest {
 
     @Test(priority = 5, enabled = true, dependsOnMethods = {"checkPositiveLogin"}, groups = {"smoke", "ui"},
             invocationCount = 1, threadPoolSize = 1, timeOut = 8000,
-            description = "Выполнение всех негативных логин тестов", testName = "Логин с неверными данными",
+            description = "Выполнение всех негативных логин тестов", testName = "Вход с неверными данными",
             dataProvider = "LoginData")
     public void checkAllNegativeLogin(String user, String password, String message) {
         loginPage.open();
