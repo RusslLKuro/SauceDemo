@@ -13,11 +13,13 @@ on:
     branches: [ "master" ]
   pull_request:
     branches: [ "master" ]
+  schedule:
+    - cron: '10 11 * 6 4'
 
 jobs:
   build:
 
-    runs-on: ubuntu-latest
+    runs-on: windows-latest
 
     steps:
     - uses: actions/checkout@v4
@@ -27,5 +29,10 @@ jobs:
         java-version: '17'
         distribution: 'temurin'
         cache: maven
+    - name: Setup browser
+      uses: abhi1693/setup-browser@v0.3.4
+      with:
+        browser: firefox
+        version: latest
     - name: Run test
       run: mvn clean test
